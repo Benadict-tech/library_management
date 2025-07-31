@@ -3,35 +3,51 @@ import Link from "next/link";
 import "../CustomCss/home.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import jwt from "jsonwebtoken";
+import Cookies from "js-cookie";
 
 export default function Home() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [passwordIcon, setPasswordIcon] = useState(false);
   const router = useRouter();
 
+  function click() {
+    setPasswordIcon((passwordIcon) => !passwordIcon);
+  }
+
   function login() {
-    if(!email||!password){
-      alert("Fill all the entries")
-      return""
+    if (!email || !password) {
+      alert("Fill all the entries");
+      return "";
     }
     const existingUser = JSON.parse(localStorage.getItem("users")) || [];
 
-    const matchedUser= existingUser.find((user)=>user.email===email&&user.password===password)
-    
+    const matchedUser = existingUser.find(
+      (user) => user.email === email && user.password === password
+    );
 
-    if (!matchedUser){
-      alert(" Email or password mismatch  (or)  Create a account for logging in")
-      setEmail("")
-      setPassword("")
-      
-      return
+    if (!matchedUser) {
+      alert(
+        " Email or password mismatch  (or)  Create a account for logging in"
+      );
+      setEmail("");
+      setPassword("");
 
+      return;
     }
-    
-    router.push("/Dashboard")
-  
-    
-    
+    const secret = "12345678";
+    const payload = { email: "nig@gmail.com" };
+
+    const token = jwt.sign(payload, secret, { expiresIn: "1h" });
+
+    console.log(secret);
+    console.log(payload);
+    console.log(token);
+
+    Cookies.set('jwt_token',token,{expires:1});
+
+     router.push("/Dashboard")
   }
 
   return (
@@ -46,14 +62,22 @@ export default function Home() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         ></input>
-        <input
-          id="password"
-          type="password"
-          className="input-item"
-          placeholder="Enter your password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
+        <div className="password-img">
+          <input
+            id="password"
+            type={!passwordIcon ? "password" : "text"}
+            className="input-item"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          ></input>
+          <img
+            src={!passwordIcon ? "./password.png" : "./unlock.png"}
+            id="pass-lock"
+            onClick={click}
+          ></img>
+        </div>
+
         <button className="btw-login" onClick={login}>
           Login
         </button>
