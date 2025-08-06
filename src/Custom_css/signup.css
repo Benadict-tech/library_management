@@ -49,6 +49,10 @@
     outline:0;
 }
 
+.password-img {
+  display: flex;
+  position: relative;
+}
 
 .sign-btw-login{
     background-color: black;
@@ -84,5 +88,19 @@
     text-decoration: underline;
     color: antiquewhite;
     font-size: 20px;
+}
+.create-account {
+  margin-top: 10px;
+  font-size: 20px;
+}
 
+.signup-link {
+  margin-top: 12px;
+  font-size: 18px;
+  color: azure;
+}
+.signup-link:hover {
+  text-decoration: underline;
+  color: antiquewhite;
+  font-size: 20px;
 }
