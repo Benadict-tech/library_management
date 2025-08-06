@@ -1,16 +1,15 @@
-
-.full-page{
+.sign-full-page{
     width: 100vw;
     height:100vh;
     display:flex;
-    background-image: url('/library.jpg') ;
+    background-image: url('/libentry.jpg') ;
     background-size: cover;
     align-items: center;
     justify-content: center;
 }
 
-.content-box{
-    background-color: rgb(235, 174, 94);
+.sign-content-box{
+    background-color: rgb(220, 195, 162);
     width: 50%;
     border-radius: 5px;
     border-width: none;
@@ -23,34 +22,35 @@
     padding: 20px;
 }
 
-.heading{
+.sign-heading{
     margin: 0;
-    color: aliceblue;
-    text-shadow: 1px 1px black;
+    color: rgb(16, 16, 7);
+    text-shadow: 1px 1px rgb(231, 226, 226);
     padding: 4px;
-    font-size: 25px;
+    font-size: 28px;
 }
 
-.input-item{
+.sign-input-item{
     display: block;
-    margin-top: 10px;
-    height: 35px;
+    margin-top: 15px;
+    height: 10px;
+    width: 250px;
     background-color: white;
     border-radius: 4px;
     border: none;
     padding: 20px;
     
 }
-.input-item:hover{
+.sign-input-item:hover{
      border-bottom: 1px solid black; 
 }
 
-.input-item:focus-visible {
+.sign-input-item:focus-visible {
     outline:0;
 }
 
 
-.btw-login{
+.sign-btw-login{
     background-color: black;
     color: bisque;
     margin-top: 20px;
@@ -61,26 +61,26 @@
     box-shadow: 1px 2px 2px rgb(211, 175, 68);
 }
 
-.forgot-password{
+.sign-forgot-password{
     margin-top: 10px;
 }
 
-.forgot-password:hover{
+.sign-forgot-password:hover{
     text-decoration: underline;
 }
 
-.create-account{
+.sign-exist-account{
     margin-top: 10px;
     font-size: 20px;
 
 }
 
-.signup-link{
+.home-link{
     margin-top: 12px;
     font-size: 18px;
     color: azure;
 }
-.signup-link:hover{
+.home-link:hover{
     text-decoration: underline;
     color: antiquewhite;
     font-size: 20px;

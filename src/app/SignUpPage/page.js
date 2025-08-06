@@ -1,21 +1,21 @@
 "use client";
 import Link from "next/link";
-import "../../CustomCss/signup.css";
+import "../../Custom_css/signup.css";
 import { useState, useEffect } from "react";
 
 import { useRouter } from "next/navigation";
 
 export default function SignUp() {
-  const [firstName, setFirstName] = useState();
-  const [lastName, setLastName] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [confirmPassword, setConfirmPassword] = useState();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordMatch, setPasswordMatch] = useState(false);
   const router = useRouter();
 
   function add() {
-    const user = { firstName, lastName, email, password };
+    const user = { firstName, lastName, email, password ,role:"user",borrowedBooks:[]};
     if (!firstName || !lastName || !email || !password || !confirmPassword) {
       alert("Enter the entities");
       return "";

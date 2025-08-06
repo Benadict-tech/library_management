@@ -1,0 +1,22 @@
+{
+  "books": [
+    {
+      "id": "76e6367d-5f76-4fc6-bcb2-aaa2fadcd71e",
+      "name": "Football",
+      "author": "Pele",
+      "category": "Brazil"
+    },
+    {
+      "id": "af00a65e-ce96-45b1-8514-641b6edbb58c",
+      "name": "Cristiano",
+      "author": "Football",
+      "category": "Portugal"
+    },
+    {
+      "name": "Game of Thrones",
+      "author": "HBO",
+      "category": "Thrones",
+      "id": "3d231908-76e8-4731-b48d-969ff23c2c24"
+    }
+  ]
+}
