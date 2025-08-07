@@ -4,7 +4,6 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 
 export default function EditModal({ EditModalOpen, book, EditedBook }) {
-  const [data, setData] = useState([]);
   const [editedBook, setEditedBook] = useState({
     name: "",
     author: "",
@@ -28,6 +27,9 @@ export default function EditModal({ EditModalOpen, book, EditedBook }) {
       .put(`${BASE_URL}books/${id}`, editedBook)
       .then((res) => EditedBook(res.data, id))
       .catch((err) => console.log("console error", err));
+      if(!editedBook.name||!editedBook.author||!editedBook.category){
+        return alert("Fill all the entities")
+      }
 
     EditModalOpen(false);
   }

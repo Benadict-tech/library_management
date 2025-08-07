@@ -39,14 +39,13 @@ export default function BooksPage() {
   }
   function addEditBook(editedBook, id) {
    
-
     setData((data) => [...data.filter((book) => book.id !== id), editedBook]);
   }
 
   return (
     <div className="main-box">
       <h3>Collection of Books</h3>
-      <div className="book-container">
+      <div className="book-container-page">
         <ul>
           {data.map((data, id) => {
             return (

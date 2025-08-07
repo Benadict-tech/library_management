@@ -19,6 +19,7 @@ export default function Modal({ ModalOpen, AddBook }) {
       name: bookName,
       author: authorName,
       category: categoryName,
+      lentTo:null
     };
     axios
       .post(` ${BASE_URL}books`, books)
