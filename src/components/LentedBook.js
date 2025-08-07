@@ -48,7 +48,7 @@ export default function LentedBook({ closeLentedModal, update, booksData }) {
         <h3 className="book-heading">Lented Books</h3>
         <div className="book-container">
           {books
-            .filter((data) => !!data.lentTo)
+            .filter((data) => data.lentTo===userEmail)
             .map((data,index) => {
               return (
                 <div key={index} className="book-list-modal">
