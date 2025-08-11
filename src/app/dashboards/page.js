@@ -16,7 +16,7 @@ export default function Dashboard() {
 
     if (!token) {
       alert("User not found");
-      window.location.href="/"
+      window.location.href = "/";
       return;
     }
 
@@ -29,7 +29,5 @@ export default function Dashboard() {
     }
   });
 
-  return (
-    <div>Progressing</div>
-  );
+  return <div></div>;
 }

@@ -31,12 +31,12 @@ export default function Home() {
             role: "admin",
           }
         : existingUser.find(
-            (user) => user.email === email && user.password === password
+            (user) => user.email === email && user.password === password,
           );
 
     if (!matchedUser) {
       alert(
-        " Email or password mismatch  (or)  Create a account for logging in"
+        " Email or password mismatch  (or)  Create a account for logging in",
       );
       setEmail("");
       setPassword("");
@@ -64,7 +64,8 @@ export default function Home() {
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-        ></input>
+        />
+
         <div className="password-img">
           <input
             id="password"

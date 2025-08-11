@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "../Custom_css/lentmodal.css";
+import "../Custom_css/lentmodaldetails.css";
 import jwt from "jsonwebtoken";
 import Cookies from "js-cookie";
 
@@ -37,7 +37,7 @@ export default function LentedBook({ closeLentedModal, update, booksData }) {
         const allBooks = books.map((b) => (b.id === book.id ? updatedBook : b));
         setBooks(allBooks);
         update(allBooks);
-        console.log(allBooks,'allbooks');
+        console.log(allBooks, "allbooks");
       })
       .catch((err) => console.log(err));
     update(books);
@@ -48,8 +48,8 @@ export default function LentedBook({ closeLentedModal, update, booksData }) {
         <h3 className="book-heading">Lented Books</h3>
         <div className="book-container">
           {books
-            .filter((data) => data.lentTo===userEmail)
-            .map((data,index) => {
+            .filter((data) => data.lentTo === userEmail)
+            .map((data, index) => {
               return (
                 <div key={index} className="book-list-modal">
                   <img className="book-image"></img>

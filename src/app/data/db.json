@@ -19,7 +19,7 @@
       "author": "Stanley",
       "category": "Action",
       "id": "e04ad0fa-5fce-4e76-9c54-42925994b86e",
-      "lentTo": "harry@gmail.com"
+      "lentTo": null
     },
     {
       "name": "Kalki",
@@ -29,17 +29,30 @@
       "lentTo": "harry@gmail.com"
     },
     {
-      "name": "Kraven",
-      "author": "Marvel",
-      "category": "Action",
-      "id": "81cb2f02-3977-473c-924a-b975ec4b058c",
-      "lentTo": "ben@gmail.com"
-    },
-    {
-      "id": "e7d49667-e1bb-4b65-bd5c-184c39ec0b8b",
       "name": "Ben",
       "author": "ben",
       "category": "Surprise",
+      "id": "e7d49667-e1bb-4b65-bd5c-184c39ec0b8b",
+      "lentTo": "ben@gmail.com"
+    },
+    {
+      "name": "Dark",
+      "author": "HBO",
+      "category": "Dark",
+      "id": "a4fff511-5d9f-4ffb-8115-e7201270f896"
+    },
+    {
+      "id": "b82b116b-f8aa-48ab-b6a3-69f47d30a03d",
+      "name": "Pursuit of Happiness",
+      "author": "HBO",
+      "category": "FeelGood",
+      "lentTo": "ben@gmail.com"
+    },
+    {
+      "id": "0a3c522b-84f3-48c6-93fb-44cb5f1075cc",
+      "name": "Viduthalai",
+      "author": "VetriMaran",
+      "category": "Society",
       "lentTo": null
     }
   ]

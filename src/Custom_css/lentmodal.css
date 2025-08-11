@@ -54,6 +54,10 @@
   border-radius: 20px;
   cursor: pointer;
   border: none;
+  box-shadow: 2px 2px 1px rgb(114, 112, 112);
+}
+.button :hover {
+  padding: 4px 11px 4px 11px;
 }
 .btw {
   margin-top: 20px;

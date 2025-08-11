@@ -11,15 +11,15 @@ export default function Modal({ ModalOpen, AddBook }) {
   const BASE_URL = "http://localhost:3001/";
 
   function save() {
-    if(!bookName||!authorName||!categoryName){
-      return alert("enter all entities")
+    if (!bookName || !authorName || !categoryName) {
+      return alert("enter all entities");
     }
     const books = {
       id: uuidv4(),
       name: bookName,
       author: authorName,
       category: categoryName,
-      lentTo:null
+      lentTo: null,
     };
     axios
       .post(` ${BASE_URL}books`, books)

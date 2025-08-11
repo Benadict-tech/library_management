@@ -1,0 +1,53 @@
+.chart-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: black;
+  gap: 30px;
+  border-radius: 200px;
+}
+
+.chart-user {
+  background-color: #aa8049;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+  flex-direction: column;
+  border-radius: 20px;
+
+  height: 400px;
+}
+.chart-user p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  background-color: white;
+  padding: 30px 20px 20px 20px;
+  border-radius: 30px;
+}
+
+.chart-books {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  flex-direction: column;
+
+  padding: 20px 20px 20px 20px;
+  border-radius: 20px;
+
+  background-color: #aa8049;
+}
+.chart-books p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  background-color: white;
+  padding: 30px 20px 20px 20px;
+  border-radius: 30px;
+}

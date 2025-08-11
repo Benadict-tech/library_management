@@ -27,9 +27,9 @@ export default function EditModal({ EditModalOpen, book, EditedBook }) {
       .put(`${BASE_URL}books/${id}`, editedBook)
       .then((res) => EditedBook(res.data, id))
       .catch((err) => console.log("console error", err));
-      if(!editedBook.name||!editedBook.author||!editedBook.category){
-        return alert("Fill all the entities")
-      }
+    if (!editedBook.name || !editedBook.author || !editedBook.category) {
+      return alert("Fill all the entities");
+    }
 
     EditModalOpen(false);
   }

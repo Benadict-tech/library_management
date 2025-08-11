@@ -4,12 +4,15 @@ import { useEffect, useState } from "react";
 import "../../../Custom_css/bookpage.css";
 import axios from "axios";
 import EditModal from "@/components/EditModal";
+import jwt from "jsonwebtoken";
+import Cookies from "js-cookie";
 
 export default function BooksPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [selectedBook, setSelectedBook] = useState(null);
   const [data, setData] = useState([]);
+  const [role, setRole] = useState("");
 
   const BASE_URL = "http://localhost:3001/";
   useEffect(() => {
@@ -18,6 +21,12 @@ export default function BooksPage() {
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
+
+  useEffect(() => {
+    const token = Cookies.get("jwt_token");
+    const decoded = jwt.decode(token);
+    setRole(decoded.role);
+  });
 
   function open() {
     setIsModalOpen(true);
@@ -38,7 +47,6 @@ export default function BooksPage() {
     setIsEditModalOpen(true);
   }
   function addEditBook(editedBook, id) {
-   
     setData((data) => [...data.filter((book) => book.id !== id), editedBook]);
   }
 
@@ -52,17 +60,25 @@ export default function BooksPage() {
               <li key={data.id} className="book-list">
                 {data.name} by {data.author}
                 <div>
-                  <button onClick={() => openEdit(data)}>Edit</button>
-                  <button onClick={() => handleDelete(data.id)}>Delete</button>
+                  {role === "admin" && (
+                    <>
+                      <button onClick={() => openEdit(data)}>Edit</button>
+                      <button onClick={() => handleDelete(data.id)}>
+                        Delete
+                      </button>
+                    </>
+                  )}
                 </div>
               </li>
             );
           })}
         </ul>
       </div>
-      <button onClick={open} className="add-button">
-        ADD BOOK
-      </button>
+      {role === "admin" && (
+        <button onClick={open} className="add-button">
+          ADD BOOK
+        </button>
+      )}
 
       {isModalOpen && <Modal ModalOpen={setIsModalOpen} AddBook={addNewBook} />}
       {isEditModalOpen && (

@@ -15,7 +15,14 @@ export default function SignUp() {
   const router = useRouter();
 
   function add() {
-    const user = { firstName, lastName, email, password ,role:"user",borrowedBooks:[]};
+    const user = {
+      firstName,
+      lastName,
+      email,
+      password,
+      role: "user",
+      borrowedBooks: [],
+    };
     if (!firstName || !lastName || !email || !password || !confirmPassword) {
       alert("Enter the entities");
       return "";
@@ -63,7 +70,7 @@ export default function SignUp() {
     setEmail("");
     setPassword("");
     setConfirmPassword("");*/
-    
+
     router.push("/");
   }
 

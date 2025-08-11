@@ -1,11 +1,23 @@
 .main-container-full {
-  
   align-items: center;
   flex-direction: column;
 }
+.search-bar {
+  align-items: center;
+  width: 500px;
+  height: 30px;
+  padding: 5px 15px 5px 15px;
+  margin-left: 300px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 3px 3px 3px black;
+  background-color: white;
+}
+
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 50px;
 }
 .card {
   display: flex;
@@ -13,7 +25,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  box-shadow: 1px 2px 4px rgb(98, 97, 97);
+  box-shadow: 3px 4px 4px #0a0a0a;
   padding: 15px 15px 15px 15px;
   margin-left: 10px;
   margin-right: 10px;
@@ -27,4 +39,9 @@
 
 .button-book {
   margin-top: 50px;
+  box-shadow: 3px 3px 2px rgb(9, 9, 9);
+  padding: 5px 15px 5px 15px;
+  background-color: white;
+  color: black;
+  font-weight: 700;
 }
