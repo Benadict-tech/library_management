@@ -54,8 +54,8 @@
 }
 
 .password-login-icon {
-  width: 20;
-  height: 20;
+  width: 20px !important;
+  height: 20px !important;
   cursor: pointer;
   position: absolute;
   right: 10;
