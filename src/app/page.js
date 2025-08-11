@@ -31,12 +31,12 @@ export default function Home() {
             role: "admin",
           }
         : existingUser.find(
-            (user) => user.email === email && user.password === password,
+            (user) => user.email === email && user.password === password
           );
 
     if (!matchedUser) {
       alert(
-        " Email or password mismatch  (or)  Create a account for logging in",
+        " Email or password mismatch  (or)  Create a account for logging in"
       );
       setEmail("");
       setPassword("");
@@ -76,6 +76,7 @@ export default function Home() {
             onChange={(e) => setPassword(e.target.value)}
           ></input>
           <img
+            className="password-login-icon"
             src={!passwordIcon ? "./password.png" : "./unlock.png"}
             id="pass-lock"
             onClick={click}
