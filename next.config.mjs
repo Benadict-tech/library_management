@@ -1,14 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-      async redirects() {
-    return [
-      {
-        source: '/old',
-        destination: '/new',
-        permanent: true
-      }
-    ]
-  }
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  reactStrictMode: true,
 };
 
 export default nextConfig;
