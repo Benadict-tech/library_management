@@ -80,7 +80,7 @@ export default function LendPage() {
           .map((book, index) => (
             <div className="card" key={index}>
               <div>
-                <img className="card-image"></img>
+                <img className="card-image" alt=""></img>
               </div>
               <div className="card-content">
                 <p>{book.name}</p>

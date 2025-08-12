@@ -23,25 +23,12 @@ export default function LentedBook({ closeLentedDetailsModal, booksData }) {
     setBooks(booksData);
   }, [booksData]);
 
-  //const BASE_URL = "http://localhost:3001/";
+  
 
   function closeLentedBook() {
     closeLentedDetailsModal(false);
   }
-  /* function handleReturnBook(book) {
-    const lentedBook = { ...book, lentTo: null };
-    axios
-      .put(`${BASE_URL}books/${book.id}`, lentedBook)
-      .then((res) => {
-        const updatedBook = res.data;
-        const allBooks = books.map((b) => (b.id === book.id ? updatedBook : b));
-        setBooks(allBooks);
-        update(allBooks);
-        console.log(allBooks, "allbooks");
-      })
-      .catch((err) => console.log(err));
-    update(books);
-  }*/
+  
   return (
     <div className="main-container">
       <div className="book-page">
@@ -52,7 +39,7 @@ export default function LentedBook({ closeLentedDetailsModal, booksData }) {
             .map((data, index) => {
               return (
                 <div key={index} className="book-list-modal">
-                  <img className="book-image"></img>
+                  <img className="book-image" alt=""></img>
                   {data.name} by {data.author}
                   <p>
                     `Rented by <spam className="user-mail">{data.lentTo}</spam>`

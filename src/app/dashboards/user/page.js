@@ -31,7 +31,7 @@ export default function UserPage() {
       Cookies.remove("jwt_token");
       router.push("/");
     }
-  }, []);
+  });
 
   useEffect(() => {
     const details = JSON.parse(localStorage.getItem("users"));

@@ -78,6 +78,7 @@ export default function Home() {
           <img
             className="password-login-icon"
             src={!passwordIcon ? "./password.png" : "./unlock.png"}
+            alt=""
             id="pass-lock"
             onClick={click}
           ></img>

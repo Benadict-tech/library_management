@@ -20,7 +20,7 @@ export default function ChartsPage() {
       .catch((err) => {
         console.log(err);
       });
-  });
+  },[]);
 
   return (
     <div className="chart-main">

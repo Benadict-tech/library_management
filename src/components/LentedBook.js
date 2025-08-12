@@ -52,7 +52,7 @@ export default function LentedBook({ closeLentedModal, update, booksData }) {
             .map((data, index) => {
               return (
                 <div key={index} className="book-list-modal">
-                  <img className="book-image"></img>
+                  <img className="book-image" alt=""></img>
                   {data.name} by {data.author}
                   <div className="button-box">
                     <button

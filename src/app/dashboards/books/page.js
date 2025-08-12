@@ -26,7 +26,7 @@ export default function BooksPage() {
     const token = Cookies.get("jwt_token");
     const decoded = jwt.decode(token);
     setRole(decoded.role);
-  });
+  },[]);
 
   function open() {
     setIsModalOpen(true);
