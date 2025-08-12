@@ -93,7 +93,7 @@ export default function Home() {
             Create Account &nbsp;{" "}
             <span>
               {" "}
-              <Link href="/signuppage" className="signup-link">
+              <Link href="/signup" className="signup-link">
                 {" "}
                 SIGN UP
               </Link>

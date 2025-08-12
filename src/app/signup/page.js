@@ -65,11 +65,7 @@ export default function SignUp() {
       localStorage.setItem("users", JSON.stringify([user]));
     }
 
-    /*setFirstName("");
-    setLastName("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");*/
+    
 
     router.push("/");
   }
