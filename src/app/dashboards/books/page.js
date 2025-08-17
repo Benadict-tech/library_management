@@ -14,10 +14,10 @@ export default function BooksPage() {
   const [data, setData] = useState([]);
   const [role, setRole] = useState("");
 
-  const BASE_URL = "http://localhost:3001/";
+  const BASE_URL = "/api/";
   useEffect(() => {
     axios
-      .get(` ${BASE_URL}books/`)
+      .get(` ${BASE_URL}books`)
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);

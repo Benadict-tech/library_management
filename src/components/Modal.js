@@ -8,7 +8,7 @@ export default function Modal({ ModalOpen, AddBook }) {
   const [authorName, setAuthorName] = useState("");
   const [categoryName, setCategoryname] = useState("");
 
-  const BASE_URL = "http://localhost:3001/";
+  const BASE_URL = "/api/"
 
   function save() {
     if (!bookName || !authorName || !categoryName) {

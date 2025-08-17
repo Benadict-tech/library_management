@@ -20,7 +20,7 @@ export default function EditModal({ EditModalOpen, book, EditedBook }) {
     }
   }, [book]);
 
-  const BASE_URL = "http://localhost:3001/";
+  const BASE_URL = "/api/";
 
   function updateBook(id) {
     axios

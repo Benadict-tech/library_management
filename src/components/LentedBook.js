@@ -23,7 +23,7 @@ export default function LentedBook({ closeLentedModal, update, booksData }) {
     setBooks(booksData);
   }, [booksData]);
 
-  const BASE_URL = "http://localhost:3001/";
+  const BASE_URL = "/api/";
 
   function closeLentedBook() {
     closeLentedModal(false);

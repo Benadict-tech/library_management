@@ -29,7 +29,7 @@ export default function LendPage() {
     setBookLength(books.length)
   },[books])*/
 
-  const BASE_URL = "http://localhost:3001/";
+  const BASE_URL = "/api/";
   useEffect(() => {
     axios
       .get(`${BASE_URL}books/`)

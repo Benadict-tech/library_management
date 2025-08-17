@@ -15,7 +15,7 @@ export default function ChartsPage() {
     }
 
     axios
-      .get("http://localhost:3001/books")
+      .get("/api/books")
       .then((res) => setTotalBooks(res.data.length))
       .catch((err) => {
         console.log(err);
